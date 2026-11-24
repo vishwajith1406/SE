@@ -1,0 +1,16 @@
+# Python runtime
+__pycache__/
+*.py[cod]
+finance_portal.db
+
+# Generated local reports and artifacts
+outputs/*
+!outputs/.gitkeep
+
+# Local reference clone and scratch work
+work/
+
+# IDE and system files
+.vscode/
+.DS_Store
+Thumbs.db
