@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f7f5"><meta name="description" content="Financial software requirements and SDLC guidance grounded in source evidence.">
+  <title>FinReq Studio — Financial systems analysis</title><link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="top"><a class="brand" href="/"><span class="brand-icon">F</span><span>FinReq<small>FINANCIAL SYSTEMS</small></span></a><span class="top-note">EVIDENCE-LED PROJECT ANALYSIS</span></header>
+  <main class="shell">
+    <section class="intro" id="intro"><div class="kicker"><span></span> REQUIREMENTS · DELIVERY</div><h1>A clear route from<br><em>brief to build.</em></h1><p>Describe the financial system you need. FinReq will retrieve relevant source evidence, recommend one delivery model, and prepare an SRS draft for review.</p></section>
+    <form id="analysis-form" class="form-card">
+      <div class="form-title"><div><div class="step">PROJECT INPUT</div><h2>Define the work</h2></div><span class="lock-mark">LOCAL WORKSPACE</span></div>
+      <label for="name">Project name</label><input id="name" name="name" required maxlength="100" placeholder="e.g. Treasury cash visibility">
+      <label for="brief">Financial project brief</label><textarea id="brief" name="brief" required minlength="30" rows="8" placeholder="What financial process is changing? Who uses it? Which systems, controls, exceptions, and outcomes are in scope?"></textarea>
+      <label for="files">Supporting evidence <span>Optional · PDF, DOCX, TXT, MD, CSV, JSON</span></label><input id="files" name="files" type="file" multiple accept=".pdf,.docx,.txt,.md,.csv,.json,.log"><div id="file-names" class="file-names"></div>
+      <p class="privacy-note"><b>Provider notice:</b> The brief and readable file text are sent to the embedding and language model services configured in <code>.env</code>. Use synthetic data unless your organization has approved those providers for the material.</p>
+      <div class="form-foot"><span id="setup-status" class="setup-status">Checking local setup…</span><button id="analyze" class="button" type="submit">Analyze project <span>→</span></button></div>
+      <p id="error" class="error" role="alert" hidden></p>
+    </form>
+    <section id="result" class="result" hidden>
+      <div class="result-top"><div class="kicker"><span></span> ANALYSIS COMPLETE</div><button id="new-project" class="text-button" type="button">New analysis</button></div>
+      <article class="recommendation"><div class="rec-icon">↗</div><div><div class="step">RECOMMENDED SDLC MODEL</div><h2 id="model"></h2><p id="rationale"></p></div></article>
+      <section class="document-wrap"><div class="document-actions"><div><div class="step">PROJECT DOCUMENT</div><h2>Software Requirements Specification</h2></div><a id="download" class="button" href="#">Download Word SRS <span>↓</span></a></div><div id="srs-preview" class="srs-preview"></div></section>
+    </section>
+    <footer><span>FINREQ STUDIO</span><span>Working drafts · stakeholder review required</span></footer>
+  </main><script src="/assets/app.js"></script>
+</body></html>
